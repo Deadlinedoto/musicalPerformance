@@ -1,0 +1,66 @@
+/* Reset margins, paddings, and borders */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul {
+    list-style: none;
+}
+
+/* Remove default hyperlink styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Reset form elements */
+button, input, textarea, select {
+    font: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Remove default table spacing */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Remove image borders and align to baseline */
+img {
+    border-style: none;
+    vertical-align: baseline;
+}
+
+/* Reset heading margins */
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+}
+
+/* Remove default button styles */
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Remove default fieldset styles */
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset textarea resize */
+textarea {
+    resize: none;
+}
