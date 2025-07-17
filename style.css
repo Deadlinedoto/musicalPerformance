@@ -1,4 +1,5 @@
 @import "reset.css";
+@import "assets/fonts/fonts.css";
 
 .video-container {
     position: fixed;
@@ -21,7 +22,78 @@ header {
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
 }
+.header__navigation {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: 30px;
+    padding: 0 10px; /* Добавляем отступы по бокам */
+    list-style: none; /* Убираем маркеры, если это <ul> */
+}
+.header__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    height: 100%;
+}
+.header__logo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 5px;
+
+}
+li {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    font-family: 'HalvarBreit', sans-serif;
+    font-size: 18px;
+    color: aliceblue;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 170px;
+    cursor: pointer;
+}
+
+.li-centered {
+    justify-content: center;
+}
 
 h1 {
-    font-family: 'GI';
+    font-family: 'Gilroy', sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+    color: aliceblue;
+    flex-wrap: nowrap;
+}
+h6 {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+.main__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.main__container-info {
+    padding-top: 100px;
+    width: 500px;
+    color: white;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 23px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    min-height: 900px;
 }
