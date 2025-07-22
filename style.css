@@ -1,6 +1,9 @@
 @import "reset.css";
 @import "assets/fonts/fonts.css";
 
+*{
+    scroll-behavior: smooth;
+}
 .video-container {
     position: absolute;
     top: 0;
@@ -17,14 +20,11 @@
 }
 
 header {
+    position: fixed;
+    z-index: 10;
     width: 100%;
     height: 90px;
-    background: linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0.4) 0%,
-            rgba(255, 255, 255, 0.05) 100%
-    );
-    backdrop-filter: blur(5px);
+    background-color: #f3e4f4;
 }
 .header__navigation {
     display: flex;
@@ -63,7 +63,7 @@ li {
     font-family: 'Gilroy', sans-serif;
     font-size: 28px;
     font-weight: 500;
-    color: #ffffff;
+    color: black;
     flex-wrap: nowrap;
     height: 100%;
     width: auto;
@@ -72,10 +72,10 @@ li {
 
 
 .header__logo-name {
-    font-family: 'HalvarBreit', sans-serif;
+    font-family: 'Gilroy', sans-serif;
     font-size: 40px;
     font-weight: 500;
-    color: #ffffff;
+    color: black;
     justify-content: center;
     text-align: center;
     line-height: 0.8;
@@ -94,11 +94,11 @@ main {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    height: calc(100vh - 90px);
+    height: 100vh;
 }
 .first-main__name {
     font-family: 'HalvarBreit', sans-serif;
-    font-size: 60px;
+    font-size: 80px;
     font-weight: 500;
     color: #ffffff;
     line-height: 0.8;
@@ -114,15 +114,98 @@ main {
     background: rgba(138, 43, 226, 0.5); /* Фиолетовый цвет с прозрачностью */
     border-radius: 50%;
     filter: blur(40px); /* Размытие */
-    z-index: -1;
+    z-index: -2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Центрирование */
 }
-h6 {
+.first-main__subname {
+    position: relative;
+    z-index: 1;
     font-family: 'Gilroy', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 500;
     color: white;
 
+}
+
+.second-main__img {
+    width: 500px;
+    height: 700px;
+    border-radius: 0;
+}
+.second-main {
+    padding: 100px 200px 0 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.second-main__area {
+    box-sizing: border-box;
+    display: flex;
+    height: 700px;
+    width: 100%;
+    border-top: black solid 1px;
+    border-bottom: black solid 1px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+.second-main__text {
+    height: 100%;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 30px;
+}
+.second-main__name {
+    font-family: 'HalvarBreit', sans-serif;
+    font-size: 45px;
+}
+.second-main__info {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+
+
+
+
+.third-main__achievements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 400px;
+}
+.third-main__achievements div {
+    height: auto;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 35px;
+}
+.svg-achievements {
+    width: 64px;
+    height: 64px;
+}
+.stat-label {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    height: 50px;
+    justify-content: flex-start;
+}
+.stat-number {
+    font-family: 'HalvarBreit', sans-serif;
+    font-size: 25px;
+    height: 60px;
+    justify-content: flex-start;
 }
