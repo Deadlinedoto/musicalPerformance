@@ -2,7 +2,7 @@
 @import "assets/fonts/fonts.css";
 
 .video-container {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -18,14 +18,18 @@
 
 header {
     width: 100%;
-    height: 150px;
-    background-color: rgba(0, 0, 0, 0.2);
+    height: 90px;
+    background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.4) 0%,
+            rgba(255, 255, 255, 0.05) 100%
+    );
     backdrop-filter: blur(5px);
 }
 .header__navigation {
     display: flex;
     flex-direction: row;
-    margin-left: 20px;
+    margin-left: 40px;
     align-items: center;
     justify-content: space-between;
     height: 100%;
@@ -38,14 +42,17 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 40px;
     height: 100%;
+    padding-right: 40px;
 }
 .header__logo {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 400px;
 
 }
 li {
@@ -53,47 +60,69 @@ li {
     align-items: center;
     text-align: center;
     justify-content: flex-start;
-    font-family: 'HalvarBreit', sans-serif;
-    font-size: 18px;
-    color: aliceblue;
-    flex-wrap: wrap;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+    flex-wrap: nowrap;
     height: 100%;
-    width: 170px;
+    width: auto;
     cursor: pointer;
 }
 
-.li-centered {
+
+.header__logo-name {
+    font-family: 'HalvarBreit', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #ffffff;
     justify-content: center;
+    text-align: center;
+    line-height: 0.8;
 }
 
-h1 {
-    font-family: 'Gilroy', sans-serif;
+
+
+
+
+main {
+    height: 1800px;
+}
+.first-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: calc(100vh - 90px);
+}
+.first-main__name {
+    font-family: 'HalvarBreit', sans-serif;
     font-size: 60px;
     font-weight: 500;
-    color: aliceblue;
-    flex-wrap: nowrap;
+    color: #ffffff;
+    line-height: 0.8;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+.first-main__name::before {
+    content: '';
+    position: absolute;
+    width: 1000px; /* Размер сферы */
+    height: 200px;
+    background: rgba(138, 43, 226, 0.5); /* Фиолетовый цвет с прозрачностью */
+    border-radius: 50%;
+    filter: blur(40px); /* Размытие */
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование */
 }
 h6 {
     font-family: 'Gilroy', sans-serif;
     font-size: 30px;
     font-weight: 500;
-    color: aliceblue;
-}
-
-.main__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.main__container-info {
-    padding-top: 100px;
-    width: 500px;
     color: white;
-    font-family: 'Gilroy', sans-serif;
-    font-size: 23px;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    min-height: 900px;
+
 }
