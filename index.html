@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -16,14 +17,15 @@
         </div>
         <ul class="header__menu">
             <li><a href="#block2">О НАС</a></li>
-            <li><a>КУПИТЬ БИЛЕТЫ</a></li>
-            <li><a>НАШИ МЕРОПРИЯТИЯ</a></li>
-            <li><a>КОНТАКТЫ</a></li>
+            <li><a href="#" onclick="openPopup('https://payberry.ru/pay/7960/9'); return false;">КУПИТЬ БИЛЕТЫ</a></li>
+            <li><a>НАШИ СОБЫТИЯ</a></li>
+            <li><a href="#footer">КОНТАКТЫ</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
+    <a class="buy-ticket" href="#" onclick="openPopup('https://payberry.ru/pay/7960/9'); return false;">КУПИТЬ БИЛЕТ</a>
     <div class="video-container">
         <video autoplay muted loop playsinline>
             <source src="assets/videos/Obrez.mp4" type="video/mp4">
@@ -35,26 +37,58 @@
         <h6 class="first-main__subname">Делу - время, а потехе - жизнь</h6>
     </div>
     <div class="second-main" id="block2">
-        <h1 class="second-main__name">
-            О НАС
-        </h1>
         <div class="second-main__info">
-            <img src="assets/imgs/about-us-2.jpg" alt="" class="second-main__img">
+            <div class="second-main__photo-container">
+                <img src="assets/imgs/about-us-4.jpg" alt="" class="second-main__img1">
+                <img src="assets/imgs/about-us-5.jpg" alt="" class="second-main__img2">
+            </div>
+
             <div class="second-main__area">
-                <article class="second-main__text">Компания Музыкальный Перформанс - это объединение талантливых людей создающих уникальные, идущие в ногу со временем вечеринки - представления.<br><br>
-                    Выступление объединяет энергичный DJ-сет и инструментальные аранжировки, создавая современное звуковое пространство.<br><br>
-                    Стильная музыка, виртуозные артисты, яркая программа, море танцев и незабываемых эмоций - все это вы можете для себя открыть став гостем нашего шоу!<br><br>
-                    На этой странице мы будем делиться с вами новостями «Музыкального перформанса», рассказывать о предстоящих событиях и дарить вам стильную музыку и промокоды.<br><br>
-                    Следите за нами и будьте частью нашей компании!</article>
+                <article class="second-main__text"><strong class="second-main--strong">Компания Музыкальный Перформанс -
+                    это объединение талантливых людей
+                    создающих уникальные, идущие в ногу со временем вечеринки - представления.</strong><br><br>
+                    Выступление объединяет энергичный DJ-сет и инструментальные аранжировки, создавая современное
+                    звуковое пространство.<br><br>
+                    Стильная музыка, виртуозные артисты, яркая программа, море танцев и незабываемых эмоций - все это вы
+                    можете для себя открыть став гостем нашего шоу!<br><br>
+                    На этой странице мы будем делиться с вами новостями «Музыкального перформанса», рассказывать о
+                    предстоящих событиях и дарить вам стильную музыку и промокоды.<br><br>
+                    Следите за нами и будьте частью нашей компании!
+                </article>
+                <div class="countdown-container">
+                    <strong class="timer-h2">До следующего события осталось:</strong>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span class="number" id="days">00</span>
+                            <span class="label">дней</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="hours">00</span>
+                            <span class="label">часов</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="minutes">00</span>
+                            <span class="label">минут</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="number" id="seconds">00</span>
+                            <span class="label">секунд</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-            <div class="third-main__achievements" >
+        <div class="second-main__achievements-container">
+            <div class="second-main__achievements">
                 <div>
-                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 32 32"><path fill="url(#goldGradient)" d="m24.844 4.063l-.969.28l-7.688 2.188l-.937.282l.188.687l-7.22-2.094l-.968-.281l-.281.969l-2.813 9.562c-.34 1.184-.547 2.598-.156 3.969c.316 1.11 1.11 2.176 2.344 2.813l-.907 3.28l-2.875-.843L2 26.813l7.688 2.218l.562-1.937l-2.875-.844l.906-3.25a4.623 4.623 0 0 0 3.469-1.156c1.063-.953 1.66-2.223 2-3.407l2.469-8.25l2.031 7.22v.03c.34 1.184.938 2.454 2 3.407c.867.777 2.078 1.246 3.469 1.125l.906 3.281l-2.875.844l.563 1.937L30 25.813l-.563-1.938l-2.875.844l-.937-3.282c1.234-.636 2.027-1.703 2.344-2.812c.39-1.371.215-2.785-.125-3.969l-2.719-9.625zM23.5 6.53L24.75 11H18.5l-.781-2.813zM8.625 7.625l5.75 1.625l-.813 2.75h-6.25zM19.063 13h6.25l.625 2.219c.269.93.363 2.035.125 2.875c-.239.84-.692 1.43-1.907 1.781c-1.215.352-1.914.082-2.562-.5c-.649-.582-1.168-1.57-1.438-2.5zM6.719 14h6.25l-1.125 3.875h-.031c-.27.93-.758 1.918-1.407 2.5c-.648.582-1.347.852-2.562.5c-1.215-.352-1.668-.941-1.907-1.781c-.238-.84-.144-1.946.125-2.875z"/>
+                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128"
+                         viewBox="0 0 32 32">
+                        <path fill="currentColor"
+                              d="m24.844 4.063l-.969.28l-7.688 2.188l-.937.282l.188.687l-7.22-2.094l-.968-.281l-.281.969l-2.813 9.562c-.34 1.184-.547 2.598-.156 3.969c.316 1.11 1.11 2.176 2.344 2.813l-.907 3.28l-2.875-.843L2 26.813l7.688 2.218l.562-1.937l-2.875-.844l.906-3.25a4.623 4.623 0 0 0 3.469-1.156c1.063-.953 1.66-2.223 2-3.407l2.469-8.25l2.031 7.22v.03c.34 1.184.938 2.454 2 3.407c.867.777 2.078 1.246 3.469 1.125l.906 3.281l-2.875.844l.563 1.937L30 25.813l-.563-1.938l-2.875.844l-.937-3.282c1.234-.636 2.027-1.703 2.344-2.812c.39-1.371.215-2.785-.125-3.969l-2.719-9.625zM23.5 6.53L24.75 11H18.5l-.781-2.813zM8.625 7.625l5.75 1.625l-.813 2.75h-6.25zM19.063 13h6.25l.625 2.219c.269.93.363 2.035.125 2.875c-.239.84-.692 1.43-1.907 1.781c-1.215.352-1.914.082-2.562-.5c-.649-.582-1.168-1.57-1.438-2.5zM6.719 14h6.25l-1.125 3.875h-.031c-.27.93-.758 1.918-1.407 2.5c-.648.582-1.347.852-2.562.5c-1.215-.352-1.668-.941-1.907-1.781c-.238-.84-.144-1.946.125-2.875z"/>
                         <defs>
                             <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" stop-color="#FFD700" /> <!-- Яркое золото -->
-                                <stop offset="100%" stop-color="#D4AF37" /> <!-- Теплое золото -->
+                                <stop offset="0%" stop-color="#FFD700"/> <!-- Яркое золото -->
+                                <stop offset="100%" stop-color="#D4AF37"/> <!-- Теплое золото -->
                             </linearGradient>
                         </defs>
                     </svg>
@@ -62,64 +96,252 @@
                     <span class="stat-number">11</span>
                 </div>
                 <div>
-                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><path fill="none" stroke="url(#luxuryGold)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22V7q-2-5-5-5a1 1 0 0 0 0 5m5 0q2-5 5-5a1 1 0 0 1 0 5m5 0v5H2V7ZM4 12v10h16V12"/>
+                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128"
+                         viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M12 22V7q-2-5-5-5a1 1 0 0 0 0 5m5 0q2-5 5-5a1 1 0 0 1 0 5m5 0v5H2V7ZM4 12v10h16V12"/>
                         <linearGradient id="luxuryGold" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stop-color="#FFDF00" /> <!-- Лимонное золото -->
-                            <stop offset="50%" stop-color="#D4AF37" /> <!-- Средний тон -->
-                            <stop offset="100%" stop-color="#996515" /> <!-- Темное золото -->
+                            <stop offset="0%" stop-color="#FFDF00"/> <!-- Лимонное золото -->
+                            <stop offset="50%" stop-color="#D4AF37"/> <!-- Средний тон -->
+                            <stop offset="100%" stop-color="#996515"/> <!-- Темное золото -->
                         </linearGradient>
                     </svg>
                     <span class="stat-label">Призов на сумму</span>
                     <span class="stat-number">265.300 ₽</span>
                 </div>
                 <div>
-                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 32 32"><path fill="url(#metallicGold)" d="M7 8.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0ZM10.5 3a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11ZM21 10a2 2 0 1 1 4 0a2 2 0 0 1-4 0Zm2-4a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm-7 10c.387 0 .757.073 1.096.207A9.045 9.045 0 0 0 15.516 18H5a1 1 0 0 0-1 1v.19a2.913 2.913 0 0 0 .085.498c.09.348.273.818.641 1.291C5.431 21.883 6.98 23 10.5 23c1.5 0 2.643-.203 3.514-.506a9.116 9.116 0 0 0 .12 2.057c-1.006.283-2.205.449-3.634.449c-3.98 0-6.18-1.29-7.351-2.792a5.564 5.564 0 0 1-1-2.017a4.905 4.905 0 0 1-.146-.898a2.494 2.494 0 0 1-.002-.067v-.023L2 19.195V19a3 3 0 0 1 3-3h11Zm14.5 7a7.5 7.5 0 1 1-15 0a7.5 7.5 0 0 1 15 0Zm-8.212-4.862l-.94 2.828h-2.994c-.731 0-1.03.938-.434 1.361l2.406 1.707l-.929 2.792c-.228.687.555 1.267 1.146.848L23 25.931l2.457 1.743c.591.42 1.374-.16 1.146-.848l-.93-2.792l2.407-1.707c.597-.423.297-1.361-.434-1.361h-2.994l-.94-2.828c-.228-.684-1.196-.684-1.424 0Z"/>
+                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128"
+                         viewBox="0 0 32 32">
+                        <path fill="currentColor"
+                              d="M7 8.5a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0ZM10.5 3a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11ZM21 10a2 2 0 1 1 4 0a2 2 0 0 1-4 0Zm2-4a4 4 0 1 0 0 8a4 4 0 0 0 0-8Zm-7 10c.387 0 .757.073 1.096.207A9.045 9.045 0 0 0 15.516 18H5a1 1 0 0 0-1 1v.19a2.913 2.913 0 0 0 .085.498c.09.348.273.818.641 1.291C5.431 21.883 6.98 23 10.5 23c1.5 0 2.643-.203 3.514-.506a9.116 9.116 0 0 0 .12 2.057c-1.006.283-2.205.449-3.634.449c-3.98 0-6.18-1.29-7.351-2.792a5.564 5.564 0 0 1-1-2.017a4.905 4.905 0 0 1-.146-.898a2.494 2.494 0 0 1-.002-.067v-.023L2 19.195V19a3 3 0 0 1 3-3h11Zm14.5 7a7.5 7.5 0 1 1-15 0a7.5 7.5 0 0 1 15 0Zm-8.212-4.862l-.94 2.828h-2.994c-.731 0-1.03.938-.434 1.361l2.406 1.707l-.929 2.792c-.228.687.555 1.267 1.146.848L23 25.931l2.457 1.743c.591.42 1.374-.16 1.146-.848l-.93-2.792l2.407-1.707c.597-.423.297-1.361-.434-1.361h-2.994l-.94-2.828c-.228-.684-1.196-.684-1.424 0Z"/>
                         <linearGradient id="metallicGold" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#FFEEA2" /> <!-- Светлый блик -->
-                            <stop offset="50%" stop-color="#FFD700" /> <!-- Основной цвет -->
-                            <stop offset="100%" stop-color="#B8860B" /> <!-- Тень -->
+                            <stop offset="0%" stop-color="#FFEEA2"/> <!-- Светлый блик -->
+                            <stop offset="50%" stop-color="#FFD700"/> <!-- Основной цвет -->
+                            <stop offset="100%" stop-color="#B8860B"/> <!-- Тень -->
                         </linearGradient>
                     </svg>
                     <span class="stat-label">Самых стильных гостей</span>
                     <span class="stat-number">2862</span>
                 </div>
                 <div>
-                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><path fill="url(#darkGold)" d="M15 2.717c-1.757-1.153-4.17-.961-5.708.576a4.549 4.549 0 0 0-1.316 3.531L2.073 19.291l-.008.017c-.711 1.66.967 3.337 2.626 2.626l.018-.007l12.467-5.904a4.549 4.549 0 0 0 3.53-1.316c1.538-1.537 1.73-3.95.576-5.707c1.154-1.756.962-4.17-.575-5.707S16.756 1.563 15 2.717Zm1.414 1.496c.94-.436 2.113-.272 2.878.494c.976.975.976 2.61 0 3.586c-.765.766-1.937.93-2.878.494a4.592 4.592 0 0 0 0-4.574Zm3.372 6.202c.437.94.272 2.112-.494 2.878c-.5.5-1.173.752-1.845.74l-7.481-7.48a2.547 2.547 0 0 1 .74-1.846c.976-.975 2.611-.975 3.587 0c.975.975.975 2.61 0 3.586L13.585 9l.707.707c1.476 1.476 3.76 1.712 5.494.708Zm-4.497 4.289l-11.384 5.39L9.296 8.712l5.993 5.993Z"/>
+                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128"
+                         viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                              d="M15 2.717c-1.757-1.153-4.17-.961-5.708.576a4.549 4.549 0 0 0-1.316 3.531L2.073 19.291l-.008.017c-.711 1.66.967 3.337 2.626 2.626l.018-.007l12.467-5.904a4.549 4.549 0 0 0 3.53-1.316c1.538-1.537 1.73-3.95.576-5.707c1.154-1.756.962-4.17-.575-5.707S16.756 1.563 15 2.717Zm1.414 1.496c.94-.436 2.113-.272 2.878.494c.976.975.976 2.61 0 3.586c-.765.766-1.937.93-2.878.494a4.592 4.592 0 0 0 0-4.574Zm3.372 6.202c.437.94.272 2.112-.494 2.878c-.5.5-1.173.752-1.845.74l-7.481-7.48a2.547 2.547 0 0 1 .74-1.846c.976-.975 2.611-.975 3.587 0c.975.975.975 2.61 0 3.586L13.585 9l.707.707c1.476 1.476 3.76 1.712 5.494.708Zm-4.497 4.289l-11.384 5.39L9.296 8.712l5.993 5.993Z"/>
                         <linearGradient id="darkGold" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stop-color="#CFB53B" /> <!-- Приглушенный золотой -->
-                            <stop offset="100%" stop-color="#8B7500" /> <!-- Глубокий оттенок -->
+                            <stop offset="0%" stop-color="#CFB53B"/> <!-- Приглушенный золотой -->
+                            <stop offset="100%" stop-color="#8B7500"/> <!-- Глубокий оттенок -->
                         </linearGradient>
                     </svg>
                     <span class="stat-label">Съеденного мороженного</span>
                     <span class="stat-number">112 кг</span>
                 </div>
                 <div>
-                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 14 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4.638 13.428a1.497 1.497 0 1 0 0-2.995a1.497 1.497 0 0 0 0 2.995m6.739-1.872a1.497 1.497 0 1 0 0-2.994a1.497 1.497 0 0 0 0 2.994"/><path d="M12.874 10.059v-5.87a.374.374 0 0 0-.472-.359l-2.995.831m3.467 1.28L7.42 7.456M4.762 2.597c.445-.601.719-1.83.719-1.83s.274 1.229.718 1.83c.449.606 1.878 1.136 1.878 1.136s-1.43.53-1.878 1.137c-.444.6-.718 1.829-.718 1.829s-.274-1.228-.719-1.83c-.448-.605-1.877-1.136-1.877-1.136s1.429-.53 1.877-1.136m1.374 9.333V8.892M2.007 6.623v2.268M.873 7.757h2.268"/></g>
+                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128"
+                         viewBox="0 0 14 14">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4.638 13.428a1.497 1.497 0 1 0 0-2.995a1.497 1.497 0 0 0 0 2.995m6.739-1.872a1.497 1.497 0 1 0 0-2.994a1.497 1.497 0 0 0 0 2.994"/>
+                            <path d="M12.874 10.059v-5.87a.374.374 0 0 0-.472-.359l-2.995.831m3.467 1.28L7.42 7.456M4.762 2.597c.445-.601.719-1.83.719-1.83s.274 1.229.718 1.83c.449.606 1.878 1.136 1.878 1.136s-1.43.53-1.878 1.137c-.444.6-.718 1.829-.718 1.829s-.274-1.228-.719-1.83c-.448-.605-1.877-1.136-1.877-1.136s1.429-.53 1.877-1.136m1.374 9.333V8.892M2.007 6.623v2.268M.873 7.757h2.268"/>
+                        </g>
 
                     </svg>
                     <span class="stat-label">Уникальных песен</span>
                     <span class="stat-number">66</span>
                 </div>
                 <div>
-                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 1026 769"><path fill="currentColor" d="M1025 528q0 76-14.5 124.5T965 726t-68.5 34t-95.5 9t-95.5-9t-68.5-34t-45.5-73.5T577 528v-15q0-26-19-45t-45-19t-45 19t-19 45v15q0 76-14.5 124.5T389 726t-68.5 34t-95.5 9t-95.5-9T61 726t-45.5-73.5T1 528q0-65 10-101q-20-28-3-58L225 27q11-19 31.5-24.5t39 5.5t24 32.5T314 81L158 326q42-5 99-5q72 0 111 11t57 35q53 18 88 18t88-18q18-24 57-35t111-11q57 0 99 5L712 81q-11-19-5.5-40.5t24-32.5t39-5.5T801 27l217 342q17 30-3 58q10 36 10 101zM225 705q56 0 90-13.5t52-50.5H83q18 37 52 50.5t90 13.5zm23-320q-81 0-120 14.5T76 449h304q-7-35-35.5-49.5T248 385zm137 128H65v20q0 23 2 44h316q2-21 2-44v-20zm416 192q56 0 90-13.5t52-50.5H659q18 37 52 50.5t90 13.5zm-23-320q-68 0-96.5 14.5T645 449h305q-13-35-52-49.5T778 385zm183 128H641v20q0 23 2 44h316q2-21 2-44v-20z"/></svg>
+                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128"
+                         viewBox="0 0 1026 769">
+                        <path fill="currentColor"
+                              d="M1025 528q0 76-14.5 124.5T965 726t-68.5 34t-95.5 9t-95.5-9t-68.5-34t-45.5-73.5T577 528v-15q0-26-19-45t-45-19t-45 19t-19 45v15q0 76-14.5 124.5T389 726t-68.5 34t-95.5 9t-95.5-9T61 726t-45.5-73.5T1 528q0-65 10-101q-20-28-3-58L225 27q11-19 31.5-24.5t39 5.5t24 32.5T314 81L158 326q42-5 99-5q72 0 111 11t57 35q53 18 88 18t88-18q18-24 57-35t111-11q57 0 99 5L712 81q-11-19-5.5-40.5t24-32.5t39-5.5T801 27l217 342q17 30-3 58q10 36 10 101zM225 705q56 0 90-13.5t52-50.5H83q18 37 52 50.5t90 13.5zm23-320q-81 0-120 14.5T76 449h304q-7-35-35.5-49.5T248 385zm137 128H65v20q0 23 2 44h316q2-21 2-44v-20zm416 192q56 0 90-13.5t52-50.5H659q18 37 52 50.5t90 13.5zm-23-320q-68 0-96.5 14.5T645 449h305q-13-35-52-49.5T778 385zm183 128H641v20q0 23 2 44h316q2-21 2-44v-20z"/>
+                    </svg>
                     <span class="stat-label">Участников команды</span>
                     <span class="stat-number">11</span>
                 </div>
                 <div>
-                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c-4.4 0-8 3.6-8 8c0 5.4 7 11.5 7.3 11.8c.2.1.5.2.7.2c.2 0 .5-.1.7-.2c.3-.3 7.3-6.4 7.3-11.8c0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7c0-3.3 2.7-6 6-6s6 2.7 6 6s-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4s4-1.8 4-4s-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2s2 .9 2 2s-.9 2-2 2z"/></svg>
+                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128"
+                         viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                              d="M12 2c-4.4 0-8 3.6-8 8c0 5.4 7 11.5 7.3 11.8c.2.1.5.2.7.2c.2 0 .5-.1.7-.2c.3-.3 7.3-6.4 7.3-11.8c0-4.4-3.6-8-8-8zm0 17.7c-2.1-2-6-6.3-6-9.7c0-3.3 2.7-6 6-6s6 2.7 6 6s-3.9 7.7-6 9.7zM12 6c-2.2 0-4 1.8-4 4s1.8 4 4 4s4-1.8 4-4s-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2s2 .9 2 2s-.9 2-2 2z"/>
+                    </svg>
                     <span class="stat-label">Локаций</span>
                     <span class="stat-number">8</span>
                 </div>
                 <div>
-                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><path d="M16 2v4M8 2v4m-5 4h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></g></svg>
+                    <svg class="svg-achievements" xmlns="http://www.w3.org/2000/svg" width="128" height="128"
+                         viewBox="0 0 24 24">
+                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                           stroke-width="2">
+                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                            <path d="M16 2v4M8 2v4m-5 4h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/>
+                        </g>
+                    </svg>
                     <span class="stat-label">Проект существует с</span>
                     <span class="stat-number">02.04.2024</span>
                 </div>
             </div>
-
+        </div>
 
 
     </div>
+    <div class="third-main" id="block3">
+        <section class="our-events">
+            <h2>НАШИ СОБЫТИЯ</h2>
+            <div class="our-events--list">
+                <div class="our-events__item">
+                    <img class="border1" src="assets/imgs/events/event1.jpg" alt="">
+                    <div class="our-events__item-info">
+                        <p><strong>Музыкальный Перформанс «Расцвет»</strong></p>
+                        <p><strong>Местоположение:</strong> Винодельня Рема Акчурина</p>
+                        <p><strong>Гостей:</strong> 310</p>
+                        <p><strong>Дресс-код:</strong> «Лепестки»</p>
+                        <p><strong>Дата:</strong> 08.03.2025</p>
+                    </div>
+                </div>
+                <div class="our-events__item">
+                    <div class="our-events__item-info">
+                        <p><strong>Юбилейный Музыкальный Перформанс «Жара»</strong></p>
+                        <p><strong>Местоположение: </strong>Отельный комплекс «Аквамарин»</p>
+                        <p><strong>Гостей: </strong>279</p>
+                        <p><strong>Дресс-код: </strong>«Белое золото»</p>
+                        <p><strong>Дата: </strong>12.07.2025</p>
+                    </div>
+                    <img class="border2" src="assets/imgs/events/event2.jpg" alt="">
+                </div>
+                <div class="our-events__item">
+                    <img class="border3" src="assets/imgs/events/event3.PNG" alt="">
+                    <div class="our-events__item-info">
+                        <p><strong>Музыкальный Перформанс «Прованс»</strong></p>
+                        <p><strong>Местоположение: </strong>Агроферма "Viva Lavanda" / Фестиваль «Природа Искусства»</p>
+                        <p><strong>Гостей: </strong>311</p>
+                        <p><strong>Дресс-код: </strong>«Лавандовый»</p>
+                        <p><strong>Дата: </strong>05.07.2025</p>
+                    </div>
+                </div>
+                <div class="our-events__item">
+                    <div class="our-events__item-info">
+                        <p><strong>Музыкальный Перформанс «Розарий»</strong></p>
+                        <p><strong>Местоположение: </strong>Никитский Ботанический Сад / Фестиваль «Природа Искусства»</p>
+                        <p><strong>Гостей: </strong>288</p>
+                        <p><strong>Дресс-код: </strong>«Розовый»</p>
+                        <p><strong>Дата: </strong>13.06.2025</p>
+                    </div>
+                    <img class="border4" src="assets/imgs/events/event4.jpg" alt="">
+                </div>
+                <div class="our-events__item">
+                    <img class="border5" src="assets/imgs/events/event5.jpg" alt="">
+                    <div class="our-events__item-info">
+                        <p><strong>Музыкальный Перформанс «Пикник»</strong></p>
+                        <p><strong>Местоположение: </strong>Агротуристический комплекс Апи Балаклава</p>
+                        <p><strong>Гостей: </strong>286</p>
+                        <p><strong>Дресс-код: </strong>«Бохо-шик»</p>
+                        <p><strong>Дата: </strong>03.05.2025</p>
+                    </div>
+                </div>
+                <div class="our-events__item">
+                    <div class="our-events__item-info">
+                        <p><strong>Музыкальный Перформанс «5.0»</strong></p>
+                        <p><strong>Местоположение: </strong>Винодельня Рема Акчурина</p>
+                        <p><strong>Гостей: </strong>195</p>
+                        <p><strong>Дресс-код: </strong>«Цвета Осени»</p>
+                        <p><strong>Дата: </strong>03.11.2024</p>
+                    </div>
+                    <img class="border1" src="assets/imgs/events/event7.jpg" alt="">
+                </div>
+                <div class="our-events__item">
+                    <img class="border2" src="assets/imgs/events/event8.jpg" alt="">
+                    <div class="our-events__item-info">
+                        <p><strong>Музыкальный Перформанс «4.0»</strong></p>
+                        <p><strong>Местоположение: </strong>Винодельня «Domain Lipko» / Фестиваль «Природа Искусства»</p>
+                        <p><strong>Гостей: </strong>214</p>
+                        <p><strong>Дресс-код: </strong>«Золото»</p>
+                        <p><strong>Дата: </strong>03.08.2024</p>
+                    </div>
+                </div>
+                <div class="our-events__item">
+                    <div class="our-events__item-info">
+                        <p><strong>Музыкальный Перформанс «3.0»</strong></p>
+                        <p><strong>Местоположение: </strong>Агроферма «Viva Lavanda» / Фестиваль «Природа Искусства»</p>
+                        <p><strong>Гостей: </strong>421</p>
+                        <p><strong>Дресс-код: </strong>«Лавандовый»</p>
+                        <p><strong>Дата: </strong>29.06.2024</p>
+                    </div>
+
+                    <img class="border3" src="assets/imgs/events/event6.jpg" alt="">
+                </div>
+                <div class="our-events__item">
+                    <img class="border4" src="assets/imgs/events/event10.jpg" alt="">
+                    <div class="our-events__item-info">
+                        <p><strong>Музыкальный Перформанс «2.0»</strong></p>
+                        <p><strong>Местоположение: </strong>Арт-кафе «Снежинка»</p>
+                        <p><strong>Гостей: </strong>63</p>
+                        <p><strong>Дресс-код: </strong>«Black tie»</p>
+                        <p><strong>Дата: </strong>10.05.2024</p>
+                    </div>
+                </div>
+                <div class="our-events__item">
+                    <div class="our-events__item-info">
+                        <p><strong>Музыкальный Перформанс «Премьера»</strong></p>
+                        <p><strong>Местоположение: </strong>Арт-кафе «Снежинка»</p>
+                        <p><strong>Гостей: </strong>55</p>
+                        <p><strong>Дресс-код: </strong>«Black tie»</p>
+                        <p><strong>Дата: </strong>05.04.2024</p>
+                    </div>
+                    <img class="border5" src="assets/imgs/events/event9.png" alt="">
+                </div>
+            </div>
+            <button class="show-more-btn">ПОКАЗАТЬ ВСЕ</button>
+        </section>
+        <section class="participants-section">
+            <h2>НАША КОМАНДА</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-track"></div>
+                </div>
+            </div>
+        </section>
+    </div>
 </main>
+<footer id="footer">
+    <div class="footer-container">
+        <div>
+            <h3>КОНТАКТЫ</h3>
+            <ul class="footer-links">
+                <li class="footer-link-item">
+                    <svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 14 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M10.333 3.644a.25.25 0 1 1 0-.5m0 .5a.25.25 0 1 0 0-.5"/><path d="M.858 3.431A2.573 2.573 0 0 1 3.431.858h6.862a2.573 2.573 0 0 1 2.573 2.573v6.862a2.573 2.573 0 0 1-2.573 2.573H3.43a2.573 2.573 0 0 1-2.573-2.573V3.43Z"/><path d="M4.312 6.862a2.55 2.55 0 1 0 5.1 0a2.55 2.55 0 1 0-5.1 0"/></g></svg>
+                    <p>Инстаграм</p>
+                    <a href="https://www.instagram.com/musicperformance_co?igsh=MTRwa3MzYnI3dmxueg==">@musicperformance_co</a>
+
+                </li>
+                <li class="footer-link-item">
+                    <svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.5 16L9 19.5L7 13l-5.5-2l21-8l-4 18l-7.5-7l4-3"/></svg>
+                    <p>Телеграм</p>
+                    <a href="https://t.me/musicperformance_co">@musicperformance_co</a>
+                </li>
+                <li class="footer-link-item">
+                    <svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><rect width="18.5" height="17" x="2.682" y="3.5" rx="4"/><path stroke-linecap="round" stroke-linejoin="round" d="m2.729 7.59l7.205 4.13a3.956 3.956 0 0 0 3.975 0l7.225-4.13"/></g></svg>
+                    <p>Для сотрудничества</p>
+                    <a href="mailto:bronislavfrolov@gmail.com">bronislavfrolov@gmail.com</a>
+                </li>
+                <li class="footer-link-item">
+                    <svg class="footer-svg" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 14 14"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M5.248 12.982a3.184 3.184 0 0 1-3.992-.44l-.449-.438a1.078 1.078 0 0 1 0-1.507L2.713 8.71a1.068 1.068 0 0 1 1.497 0a1.078 1.078 0 0 0 1.507 0L8.71 5.717a1.058 1.058 0 0 0 0-1.507a1.068 1.068 0 0 1 0-1.497L10.607.817a1.078 1.078 0 0 1 1.507 0l.439.45a3.184 3.184 0 0 1 .439 3.99a28.88 28.88 0 0 1-7.744 7.725"/></svg>
+                    <p>Телефон</p>
+                    <a href="tel:+7978783-10-93">+7 (978) 783-10-93</a>
+                </li>
+            </ul>
+            <p class="footer-info">© Официальный сайт компании «Музыкальный Перформанс», ИП «Фролов Бронислав Станиславович» 2025</p>
+            <p class="footer-info">Юридический адрес 299011, г. Севастополь, ул. Большая Морская, Арт-кафе «Снежинка»</p>
+            <p class="footer-info">ОГРН 320920000001220</p>
+            <p class="footer-info">ИНН 920450598236</p>
+
+        </div>
+    </div>
+</footer>
+<button id="scrollToTopBtn" class="scroll-to-top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 2048 2048">
+        <path fill="white" d="m1875 1037l-787-787v1798H960V250l-787 787l-90-90L1024 6l941 941l-90 90z"/>
+    </svg>
+</button>
+
 </body>
 </html>
