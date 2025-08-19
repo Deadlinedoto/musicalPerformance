@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function() {
     const items = document.querySelectorAll('.our-events__item');
     const showMoreBtn = document.querySelector('.show-more-btn');
-    const initialItemsToShow = 4;
+    const initialItemsToShow = 2;
 
     // Скрываем все элементы кроме первых двух
     function hideItems() {

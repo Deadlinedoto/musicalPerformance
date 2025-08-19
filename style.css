@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "assets/fonts/fonts.css";
+@import "styles/media.css";
 
 * {
     scroll-behavior: smooth;
@@ -112,6 +113,7 @@ li {
     font-size: 80px;
     font-weight: 500;
     color: #ffffff;
+    text-align: center;
     line-height: 0.8;
     bottom: 85px;
     position: relative;
@@ -195,11 +197,9 @@ li {
 }
 
 .second-main__area {
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    height: 700px;
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -242,8 +242,6 @@ li {
     left: -10px;
     right: -10px;
     bottom: -10px;
-    width: calc(100% + 20px);
-    height: calc(100% + 20px);
     background-image: url("/assets/imgs/achievements-bg5.JPG");
     background-size: cover;
     background-position: center;
@@ -529,7 +527,6 @@ li {
 .carousel-container {
     position: relative;
     max-width: 99vw;
-    padding: 0 80px;
 }
 
 /* Область просмотра карусели */
@@ -924,90 +921,175 @@ footer h3 {
 
 
 
-/* Медиа-запросы для адаптивности */
-@media (max-width: 768px) {
+@media (max-width: 1650px) {
+    .second-main__info {
+        margin-top: 100px;
+    }
+    .second-main__achievements {
+        width: 95%;
+    }
+}
+@media (max-width: 1550px) {
+    .description-text {
+        font-size: 15px;
+    }
+}
+@media (max-width: 1440px) {
+    .second-main__info {
+    };
+    .second-main__area {
+        height: 900px;
+    };
+    .second-main__text {
+        height: 100%;
+    };
     .carousel-container {
-        padding: 0 20px;
+        width: 100%;
+        padding: 0;
     }
-    
-    .carousel-card {
-        flex: 0 0 100%;
-        padding: 0 10px;
+}
+@media (max-width: 1350px) {
+    .header__navigation {
+        margin: 0;
     }
-    
-    .card-content {
-        height: 400px;
-        padding: 20px;
+    .header__menu li {
+        font-size: 22px;
     }
-    
-    .card-content.center {
-        height: 500px;
+    .header__logo-name {
+        width: 300px;
     }
-    
-    .card-content.side {
-        height: 500px;
-        transform: scale(0.8);
-    }
-    
-    .carousel-card img {
-        width: 250px;
+    .our-events__item img {
+        width: 500px;
         height: 300px;
     }
-    
-    .card-content.center img {
-        width: 250px;
-        height: 300px;
+    .footer-links {
+        gap: 0;
     }
-    
-    .participants-section h2 {
-        font-size: 32px;
-        margin-bottom: 30px;
+    .our-events__item p {
+        font-size: 22px;
     }
-    
-    .flip-btn {
+    .footer-link-item {
+        font-size: 20px;
+    }
+    .second-main__info {
+        padding: 0;
+    }
+}
+@media (max-width: 1200px) {
+    .description-text {
         font-size: 12px;
-        padding: 8px 16px;
     }
-    
-
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    footer {
+        height: auto;
+        padding-bottom: 150px;
+    }
 }
-
-@media (max-width: 480px) {
-    .carousel-container {
-        padding: 0 10px;
+@media (max-width: 1100px) {
+    .second-main__info {
+        flex-direction: column;
+        gap: 200px;
     }
-    
+    .second-main__achievements {
+        display: none;
+    }
+    .second-main {
+        gap: 0;
+    }
+    .our-events--list {
+        padding: 0 100px;
+    }
+    .third-main {
+        padding: 0;
+    }
+    .first-main__name::before {
+        width: 500px;
+    }
+    .second-main__text {
+        padding: 0 50px;
+
+    }
+}
+@media (max-width: 900px) {
     .card-content {
-        height: 350px;
-        padding: 15px;
+        height: 900px;
     }
-    
     .card-content.center {
-        height: 450px;
+        height: 800px;
     }
-    
-    .card-content.side {
-        height: 450px;
-        transform: scale(0.7);
+    .card-back {
+        justify-content: center;
     }
-    
-    .carousel-card img {
-        width: 200px;
-        height: 250px;
-    }
-    
     .card-content.center img {
-        width: 200px;
-        height: 250px;
+        width: 220px;
+        height: 320px;
     }
-    
-    .participants-section h2 {
-        font-size: 28px;
-        margin-bottom: 25px;
+    .carousel-card img {
+        width: 220px;
+        height: 320px;
     }
-    
-    .flip-btn {
-        font-size: 11px;
-        padding: 6px 12px;
+    .header__menu {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 825px) {
+    .our-events__item {
+        flex-direction: column;
+    }
+    .header__navigation {
+        height: auto;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .header__menu {
+        padding: 0;
+        white-space: nowrap;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .first-main__name {
+        font-size: 60px;
+    }
+    .first-main__subname {
+        font-size: 30px;
     }
 }
+
+
+@media (max-width: 768px) {
+    .participants-section {
+        display: none;
+    }
+    .second-main__text {
+        font-size: 20px;
+    }
+    .second-main--strong {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .first-main__name {
+        font-size: 37px;
+    }
+    .first-main__subname {
+        font-size: 20px;
+    }
+    .second-main__img1 {
+        width: 400px;
+        height: 250px;
+    }
+    .second-main__img2 {
+        width: 300px;
+        height: 250px;
+    }
+}
+
+
+
+
