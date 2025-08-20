@@ -135,7 +135,17 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarousel();
     });
 
+    function resetAllCardsFlip() {
+        const allCardInners = document.querySelectorAll('.card-inner');
+        allCardInners.forEach(card => {
+            card.classList.remove('flipped');
+        });
+    }
+
     function updateCarousel() {
+        // Сбрасываем все карточки на лицевую сторону
+        resetAllCardsFlip();
+
         cards.forEach((card, index) => {
             const content = card.querySelector('.card-content');
             content.classList.remove('center', 'side');
@@ -202,6 +212,7 @@ function flipCard(button) {
     const cardInner = button.closest('.card-inner');
     cardInner.classList.toggle('flipped');
 }
+
 
 setInterval(updateCountdown, 1000);
 updateCountdown();

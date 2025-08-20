@@ -993,9 +993,6 @@ footer h3 {
         flex-direction: column;
         gap: 200px;
     }
-    .second-main__achievements {
-        display: none;
-    }
     .second-main {
         gap: 0;
     }
@@ -1062,9 +1059,6 @@ footer h3 {
 
 
 @media (max-width: 768px) {
-    .participants-section {
-        display: none;
-    }
     .second-main__text {
         font-size: 20px;
     }
@@ -1090,6 +1084,307 @@ footer h3 {
     }
 }
 
+/* Large mobile (≤767px) */
+@media (max-width: 767px) {
+}
 
+/* Standard mobile (≤424px) */
+@media (max-width: 430px) {
+    .video-container {
+        height: 900px;
+        object-fit: cover;
+    }
+    .first-main {
+        height: 900px;
+    }
+    .first-main__name::before {
+        width: 300px;
+    }
+    .header__navigation {
+        padding-top: 20px;
+    }
+    .second-main__img1 {
+        margin-left: 10%;
+        width: 300px;
+        height: 220px;
+    }
+    .second-main__img2 {
+        width: 200px;
+        height: 150px;
+    }
+    .second-main__info {
+        margin: 0;
+        gap: 50px;
+    }
+    .second-main__photo-container {
+        padding-top: 50px;
+    }
+    .countdown {
+        width: 100%;
+    }
+    .countdown-item {
+        min-width: 65px;
+        padding: 15px 5px;
+    }
+    .second-main--strong {
+        font-size: 20px;
+    }
+    .second-main__text {
+        font-size: 18px;
+    }
+    .second-main__achievements-container {
+        padding: 30px 20px;
+    }
+    .second-main__achievements {
+        flex-direction: column;
+        height: 100%;
+    }
+    .second-main__achievements div {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        width: 100%;
+        margin: 0 30px;
+    }
+    .second-main__photo-container {
+        width: 100%;
+    }
+    .svg-achievements {
+        height: 40px;
+        width: 40px;
+    }
+    .stat-label {
+        height: 100%;
+        text-align: center;
+        font-size: 15px;
+
+    }
+    .stat-number {
+        margin-left: auto;
+        height: 100%;
+        font-size: 20px;
+        text-align: center;
+
+    }
+    .our-events {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .our-events--list {
+        padding: 0;
+    }
+    .our-events h2 {
+        font-size: 30px;
+        margin-bottom: 60px;
+    }
+    .our-events h2::after {
+        width: 100px
+    }
+    .our-events img {
+        width: 350px;
+        height: 200px;
+        border-radius: 20px;
+    }
+    .our-events__item {
+        padding-bottom: 50px;
+        margin: 0;
+        width: 380px;
+    }
+    .our-events__item {
+        width: 100%;
+    }
+    .our-events__item img{
+        order: 1;
+    }
+    .our-events__item-info {
+        order: 2;
+        width: 90%;
+    }
+    .our-events__item.visible {
+        width: 100%;
+    }
+    .participants-section {
+        padding: 0;
+    }
+    .participants-section h2 {
+        font-size: 30px;
+    }
+
+    .show-more-btn {
+        padding: 15px 30px;
+        font-size: 22px;
+    }
+
+
+    .carousel {
+        margin: 50px 0;
+    }
+    .carousel-track {
+        padding: 0;
+    }
+    .carousel-card {
+        padding: 5px;
+        flex: 0 0 3;
+    }
+    .card-front {
+        height: 400px;
+        width: 100px;
+    }
+    .card-front h3 {
+        font-size: 15px;
+    }
+    .card-front button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 10px;
+        height: 40px;
+        padding: 10px 10px;
+    }
+    .flip-btn svg {
+        display: none;
+    }
+    .card-content.center img {
+        width: 150px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .card-content.center {
+        height: 400px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+    }
+    .card-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-content.side {
+        height: 400px;
+    }
+    .card-front img {
+        width: 150px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .card-content.side:active {
+        transform: scale(0.9) translateY(10px);
+    }
+    .card-back h3 {
+        font-size: 15px;
+        margin: 15px 0 10px;
+    }
+    .description-text {
+        padding: 0 10px;
+        font-size: 13px;
+        overflow: hidden;
+        overflow-y: auto;
+
+    }
+    .flip-btn {
+        margin: 5px 0 0 0;
+    }
+
+
+    .footer-container h3{
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .footer-links {
+        gap: 50px;
+    }
+    .footer-link-item {
+        gap: 10px;
+    }
+
+
+    .number {
+        font-size: 25px;
+    }
+
+    .label {
+        font-size: 12px;
+    }
+    .timer-h2 {
+        font-size: 22px;
+    }
+    .buy-ticket {
+        margin-bottom: 30px;
+        width: 200px;
+        height: 70px;
+        font-size: 20px;
+        left: 25%;
+    }
+    .scroll-to-top {
+        margin-bottom: 30px;
+        width: 70px;
+        height: 70px;
+        padding: 0;
+    }
+    .scroll-to-top__svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Small mobile (≤374px) */
+@media (max-width: 375px) {
+    .second-main__achievements-container {
+        padding: 20px 5px;
+        gap: 10px;
+    }
+    .stat-number {
+        font-size: 18px;
+    }
+    .svg-achievements {
+        height: 30px;
+        width: 30px;
+    }
+    .description-text {
+        width: 100%;
+        padding: 5px;
+    }
+    .header__logo {
+        width: 100%;
+    }
+    .second-main__photo-container {
+        padding: 0;
+    }
+    .timer-h2 {
+        font-size: 20px;
+    }
+    .card-back h3 {
+        font-size: 13px;
+    }
+    .flip-btn {
+        margin-bottom: 5px;
+    }
+    .footer-link-item {
+        font-size: 17px;
+    }
+    .footer-info {
+        font-size: 14px;
+        margin: 20px 20px 0 20px;
+    }
+    .scroll-to-top {
+        left: 80%;
+        margin-bottom: 0;
+    }
+    .buy-ticket {
+        margin-bottom: 0;
+    }
+    .footer-links {
+        gap: 35px;
+    }
+}
+
+/* Legacy mobile (≤319px) */
+@media (max-width: 319px) {
+}
 
 
