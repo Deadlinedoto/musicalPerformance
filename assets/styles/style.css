@@ -76,12 +76,16 @@ header {
 
 .header__logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 400px;
+}
 
+.big-logo {
+    width: 180px;
+    height: 180px;
 }
 
 li {
@@ -1074,7 +1078,7 @@ footer h3 {
     .header__navigation {
         height: auto;
         flex-direction: column;
-        padding-top: 20px;
+        padding-top: 0;
     }
     .header__menu {
         padding: 0;
@@ -1088,6 +1092,11 @@ footer h3 {
     .first-main__subname {
         font-size: 30px;
     }
+    .big-logo {
+        width: 100px;
+        height: 100px;
+    }
+
 }
 
 
