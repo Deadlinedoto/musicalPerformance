@@ -1154,7 +1154,7 @@ footer h3 {
     .second-main__achievements-container::before {
         background-size: cover;
         background-position: center;
-        filter: none;
+        filter: brightness(0.3) blur(2px);
         z-index: -3;
     }
     .header__navigation {
