@@ -541,6 +541,7 @@ li {
 .carousel-container {
     position: relative;
     max-width: 99vw;
+    touch-action: pan-y;
 }
 
 /* Область просмотра карусели */
@@ -548,6 +549,7 @@ li {
     width: 100%;
     overflow: hidden;
     position: relative;
+    touch-action: pan-y;
 }
 
 /* Дорожка с карточками */
@@ -556,6 +558,7 @@ li {
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     padding: 60px 0;
     align-items: center;
+    touch-action: pan-y;
 }
 
 
@@ -565,6 +568,7 @@ li {
     flex: 0 0 33.333%;
     padding: 0 15px;
     transition: all 0.5s ease;
+    touch-action: pan-y;
 }
 
 .card-content {
@@ -580,6 +584,7 @@ li {
     align-items: center;
     position: relative;
     overflow: hidden;
+    touch-action: pan-y;
 }
 
 /* Контейнер для переворота */
@@ -590,10 +595,12 @@ li {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    touch-action: pan-y;
 }
 
 .card-inner.flipped {
     transform: rotateY(180deg);
+    touch-action: pan-y;
 }
 
 /* Лицевая и обратная стороны карточки */
@@ -607,6 +614,7 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    touch-action: pan-y;
 }
 
 .card-back {
@@ -614,6 +622,7 @@ li {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 10px;
     color: white;
+    touch-action: pan-y;
 }
 
 /* Кнопка переворота */
@@ -651,6 +660,7 @@ li {
     line-height: 1.6;
     padding: 0 20px;
     text-align: center;
+    touch-action: pan-y;
 }
 
 .card-content h3 {
@@ -660,12 +670,14 @@ li {
     color: #333;
     margin: 15px 0 0 0;
     text-align: center;
+    touch-action: pan-y;
 }
 
 .card-back h3 {
     color: white;
     font-size: 28px;
     margin-bottom: 20px;
+    touch-action: pan-y;
 }
 
 /* Стили для краткого описания на лицевой стороне */
@@ -683,6 +695,7 @@ li {
     transform: scale(1);
     z-index: 2;
     height: 600px;
+    touch-action: pan-y;
 }
 
 /* Соседние карточки */
@@ -690,6 +703,7 @@ li {
     opacity: 0.7;
     filter: brightness(0.95);
     height: 600px;
+    touch-action: pan-y;
 }
 
 /* Стили изображений */
@@ -699,15 +713,18 @@ li {
     border-radius: 50px;
     object-fit: contain;
     border: 6px solid white;
+    touch-action: pan-y;
 }
 
 .card-content.center img {
     width: 300px;
     height: 400px;
+    touch-action: pan-y;
 }
 
 .card-content.side {
     cursor: pointer;
+    touch-action: pan-y;
 }
 
 /* Увеличиваем зону клика для левой карточки */
@@ -718,6 +735,7 @@ li {
     top: 0;
     width: 50px;
     height: 100%;
+    touch-action: pan-y;
 }
 
 /* Увеличиваем зону клика для правой карточки */
@@ -728,6 +746,7 @@ li {
     top: 0;
     width: 50px;
     height: 100%;
+    touch-action: pan-y;
 }
 
 /* Анимация при клике */
