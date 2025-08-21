@@ -1113,6 +1113,9 @@ footer h3 {
         width: 100%;
         max-width: 100vw;
     }
+    #loader {
+        width: 100%;
+    }
     .video-container {
         height: 900px;
         object-fit: cover;
