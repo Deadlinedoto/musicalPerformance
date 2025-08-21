@@ -1234,6 +1234,9 @@ footer h3 {
         font-size: 22px;
         width: 70%;
     }
+    .card-front img {
+        cursor: none;
+    }
 
 
     .carousel {
