@@ -1151,6 +1151,13 @@ footer h3 {
     .second-main__photo-container {
         padding: 0;
     }
+    .second-main__achievements-container::before {
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: blur(5px) brightness(0.7);
+        z-index: -3;
+    }
     .header__navigation {
         padding-top: 20px;
     }
