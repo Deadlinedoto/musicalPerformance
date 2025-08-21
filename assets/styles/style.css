@@ -1090,6 +1090,11 @@ footer h3 {
 
 /* Standard mobile (≤424px) */
 @media (max-width: 430px) {
+    * {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
     .video-container {
         height: 900px;
         object-fit: cover;
@@ -1104,11 +1109,13 @@ footer h3 {
         padding-top: 20px;
     }
     .second-main__img1 {
+        object-fit: cover;
         margin-left: 10%;
         width: 300px;
         height: 220px;
     }
     .second-main__img2 {
+        object-fit: cover;
         width: 200px;
         height: 150px;
     }
@@ -1334,6 +1341,12 @@ footer h3 {
 
 /* Small mobile (≤374px) */
 @media (max-width: 375px) {
+    * {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+
     .second-main__achievements-container {
         padding: 20px 5px;
         gap: 10px;
