@@ -1082,6 +1082,11 @@ footer h3 {
         width: 300px;
         height: 250px;
     }
+    .buy-ticket {
+        left: auto;
+        right: auto;
+        margin-left: 30px;
+    }
 }
 
 /* Large mobile (≤767px) */
