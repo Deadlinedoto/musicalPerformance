@@ -1152,10 +1152,9 @@ footer h3 {
         padding: 0;
     }
     .second-main__achievements-container::before {
-        height: 100%;
         background-size: cover;
         background-position: center;
-        filter: blur(5px) brightness(0.7);
+        filter: none;
         z-index: -3;
     }
     .header__navigation {
@@ -1295,6 +1294,7 @@ footer h3 {
         flex: 0 0 3;
     }
     .card-front {
+        justify-content: space-between;
         height: 400px;
         width: 100px;
     }
@@ -1343,6 +1343,9 @@ footer h3 {
     }
     .card-content.side:active {
         transform: scale(0.9) translateY(10px);
+    }
+    .card-back {
+        justify-content: space-between;
     }
     .card-back h3 {
         font-size: 15px;
