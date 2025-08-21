@@ -1257,12 +1257,14 @@ footer h3 {
 
 
     .carousel {
+        touch-action: pan-y;
         margin: 50px 0;
     }
     .carousel-track {
         padding: 0;
     }
     .carousel-card {
+        touch-action: pan-y;
         padding: 5px;
         flex: 0 0 3;
     }
@@ -1285,6 +1287,7 @@ footer h3 {
         display: none;
     }
     .card-content.center img {
+        touch-action: pan-y;
         width: 150px;
         height: 300px;
         object-fit: cover;
@@ -1306,6 +1309,7 @@ footer h3 {
         height: 400px;
     }
     .card-front img {
+        touch-action: pan-y;
         width: 150px;
         height: 300px;
         object-fit: cover;
