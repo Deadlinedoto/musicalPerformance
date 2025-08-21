@@ -10,6 +10,13 @@ function openPopup(url) {
     );
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        document.getElementById('loader').style.display = 'none';
+    }, 3000); // 3 секунды
+});
+
+
 function updateCountdown() {
     const targetDate = new Date('2025-08-23T21:00:00');
     const now = new Date();

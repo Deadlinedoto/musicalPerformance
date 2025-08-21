@@ -8,6 +8,19 @@
 main {
     height: 100%;
 }
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 .video-container {
     position: absolute;
@@ -236,6 +249,7 @@ li {
 }
 
 .second-main__achievements-container::before {
+    overflow: hidden;
     content: '';
     position: absolute;
     top: -10px;
@@ -246,7 +260,7 @@ li {
     background-size: cover;
     background-position: center;
     filter: blur(5px) brightness(0.7);
-    z-index: -1;
+    z-index: -3;
 }
 
 
@@ -1388,6 +1402,9 @@ footer h3 {
         gap: 5px;
         margin: 0;
     }
+    .timer-h2 {
+        font-size: 17px;
+    }
     .svg-achievements {
         height: 25px;
         width: 25px;
@@ -1406,9 +1423,6 @@ footer h3 {
     }
     .second-main__photo-container {
         padding: 0;
-    }
-    .timer-h2 {
-        font-size: 20px;
     }
     .card-back h3 {
         font-size: 13px;
