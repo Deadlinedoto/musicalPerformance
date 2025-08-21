@@ -1095,6 +1095,12 @@ footer h3 {
     .second-main__text {
         font-size: 20px;
     }
+    .second-main__achievements-container::before {
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.3) blur(2px);
+        z-index: -3;
+    }
     .second-main--strong {
         font-size: 25px;
     }
