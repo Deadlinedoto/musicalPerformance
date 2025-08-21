@@ -1329,17 +1329,18 @@ footer h3 {
         font-size: 22px;
     }
     .buy-ticket {
-        margin-bottom: 30px;
         width: 200px;
         height: 70px;
         font-size: 20px;
-        left: 25%;
+        left: auto;
+        right: auto;
+        margin-left: 30px;
     }
     .scroll-to-top {
-        margin-bottom: 30px;
         width: 70px;
         height: 70px;
         padding: 0;
+        left: auto;
     }
     .scroll-to-top__svg {
         width: 25px;
