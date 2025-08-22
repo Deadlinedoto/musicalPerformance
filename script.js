@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showAllItems();
 
         // Плавная прокрутка к последнему элементу
-        items[items.length - 5].scrollIntoView({
+        items[items.length - 7].scrollIntoView({
             behavior: 'smooth',
             block: 'nearest'
         });
